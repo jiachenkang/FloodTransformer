@@ -30,12 +30,12 @@ pip install -r requirements.txt
 ```
 
 ### Required Python Packages
-- `torch==2.5.1` - PyTorch deep learning framework
-- `netcdf4==1.7.2` - For reading NetCDF data files
-- `numpy==2.2.2` - Numerical computing
-- `matplotlib==3.10.0` - Plotting and visualization
-- `wandb==0.19` - Experiment tracking and logging
-- `pathlib` - Path manipulation utilities
+- torch==2.5.1
+- netcdf4==1.7.2
+- numpy==2.2.2
+- matplotlib==3.10.0
+- wandb==0.19
+- pathlib
 
 ## Data Requirements
 
