@@ -1,0 +1,6 @@
+torch==2.5.1
+netcdf4==1.7.2
+numpy==2.2.2
+matplotlib==3.10.0
+wandb==0.19
+pathlib
