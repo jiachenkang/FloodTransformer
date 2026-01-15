@@ -45,6 +45,7 @@ The model expects the following data files in the `data/` directory:
 - NetCDF files (`.nc`) containing:
   - `Mesh2D_s1`: Water level time series
   - `Mesh2D_rain`: Rainfall data
+  - `Mesh2D_ucx`, `Mesh2D_ucy`: Flow velocity in the X and Y direction
   - `Mesh2DContour_x`, `Mesh2DContour_y`: Grid coordinates
 
 

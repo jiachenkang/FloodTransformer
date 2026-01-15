@@ -110,6 +110,18 @@ class FloodTransformer(nn.Module):
             nn.Linear(width * 4, pred_length),
             )
         
+        self.u_regression_head = nn.Sequential(
+            nn.Linear(width, width * 4),
+            nn.GELU(),
+            nn.Linear(width * 4, pred_length),
+            )
+
+        self.v_regression_head = nn.Sequential(
+            nn.Linear(width, width * 4),
+            nn.GELU(),
+            nn.Linear(width * 4, pred_length),
+            )
+        
         self.classification_head = nn.Sequential(
             nn.Linear(width, width * 4),
             nn.GELU(),
@@ -149,11 +161,13 @@ class FloodTransformer(nn.Module):
 
         water_level_pred = self.regression_head(x)
         has_water_pred = self.classification_head(x)
+        u_pred = self.u_regression_head(x)
+        v_pred = self.v_regression_head(x)
 
-        return water_level_pred, has_water_pred
+        return water_level_pred, has_water_pred, u_pred, v_pred
 
     def setup_ddp(self, rank):
-        """Setup DDP training"""
+        """DDP setup for the model."""
         self.to(rank)  # move model to GPU
         self = DDP(self, device_ids=[rank])
         return self
