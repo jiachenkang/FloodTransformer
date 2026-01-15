@@ -2,6 +2,7 @@
 
 A deep learning project for flood prediction using Transformer architecture. This project implements a FloodTransformer model that predicts water levels and inundation status using historical water level data, rainfall data, and DEM information.
 
+For more details, please refer to our paper: [**FloodTransformer: Efficient real-time high-resolution flood forecasting**](https://www.sciencedirect.com/science/article/pii/S136481522500516X).
 
 ## Installation
 
@@ -98,13 +99,16 @@ Our code is released under the MIT License.
 
 ## Citation
 
-Please consider citing our work, if you find this repository useful:
+Please consider citing our work if you find this repository useful. The paper is available at [ScienceDirect](https://www.sciencedirect.com/science/article/pii/S136481522500516X).
 
 ```
-@article{gu5374815floodtransformer,
-    title={Floodtransformer: Efficient Real-Time High-Resolution Flood Forecasting},
-    author={GU, ZHANZHONG and Kang, Jiachen and Jin, Wenzheng and Tong, Feifei and Guo, Y Jay and Jia, Wenjing},
-    journal={Available at SSRN 5374815}
+@article{gu2025floodtransformer,
+  title={FloodTransformer: Efficient real-time high-resolution flood forecasting},
+  author={Gu, Zhanzhong and Kang, Jiachen and Jin, Wenzheng and Tong, Feifei and Guo, Y Jay and Jia, Wenjing},
+  journal={Environmental Modelling \& Software},
+  pages={106832},
+  year={2025},
+  publisher={Elsevier}
 }
 ```
 
